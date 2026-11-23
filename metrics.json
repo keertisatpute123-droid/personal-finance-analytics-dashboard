@@ -1,0 +1,94 @@
+{
+  "best_model": "Random Forest (tuned)",
+  "best_params": {
+    "model__max_depth": 2,
+    "model__min_samples_leaf": 2,
+    "model__n_estimators": 400
+  },
+  "selection_method": "TimeSeriesSplit cross-validation on training months",
+  "n_train_months": 22,
+  "n_test_months": 5,
+  "heldout_metrics": {
+    "MAE": 5618.291081329075,
+    "RMSE": 5833.654785666866,
+    "R2": -1.784491039914652,
+    "MAPE_%": 26.44489213617239
+  },
+  "comparison_table": [
+    {
+      "Model": "Naive (same as last month)",
+      "CV_RMSE": NaN,
+      "MAE": 4824.078,
+      "RMSE": 5551.2518,
+      "R2": -1.5214,
+      "MAPE_%": 21.0006
+    },
+    {
+      "Model": "Random Forest (tuned)",
+      "CV_RMSE": 4998.7771,
+      "MAE": 5618.2911,
+      "RMSE": 5833.6548,
+      "R2": -1.7845,
+      "MAPE_%": 26.4449
+    },
+    {
+      "Model": "Random Forest",
+      "CV_RMSE": 5416.0134,
+      "MAE": 5865.7402,
+      "RMSE": 6166.7575,
+      "R2": -2.1116,
+      "MAPE_%": 27.8567
+    },
+    {
+      "Model": "Ridge",
+      "CV_RMSE": 6453.9136,
+      "MAE": 6683.7965,
+      "RMSE": 7766.6818,
+      "R2": -3.9355,
+      "MAPE_%": 32.431
+    },
+    {
+      "Model": "Gradient Boosting",
+      "CV_RMSE": 7221.472,
+      "MAE": 8086.8895,
+      "RMSE": 8268.8172,
+      "R2": -4.5944,
+      "MAPE_%": 37.8082
+    },
+    {
+      "Model": "Linear Regression",
+      "CV_RMSE": 11383.7882,
+      "MAE": 9409.3997,
+      "RMSE": 10252.5797,
+      "R2": -7.6006,
+      "MAPE_%": 45.0676
+    }
+  ],
+  "forecast": [
+    {
+      "year_month": "2024-07",
+      "predicted_expense": 21984.38,
+      "lower": 10550.42,
+      "upper": 33418.35
+    },
+    {
+      "year_month": "2024-08",
+      "predicted_expense": 23918.94,
+      "lower": 12484.98,
+      "upper": 35352.91
+    },
+    {
+      "year_month": "2024-09",
+      "predicted_expense": 24069.58,
+      "lower": 12635.62,
+      "upper": 35503.54
+    }
+  ],
+  "anomaly_detection": {
+    "contamination": 0.03,
+    "flagged": 41,
+    "flagged_genuinely_unusual_pct": 48.8,
+    "unflagged_genuinely_unusual_pct": 4.0
+  },
+  "data_source": "SYNTHETIC fallback (not real data)"
+}
